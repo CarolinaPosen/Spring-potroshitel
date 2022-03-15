@@ -2,6 +2,13 @@ package by.itacademy;
 
 public class TerminatorQuoter implements Quoter {
 
+    /**
+     * Каждый раз при создании bean этому полю будет присваиваться значение
+     * от 2 до 7
+     */
+    @InjectRandomInt(min = 2, max = 7)
+    private int repeat;
+
     private String message;
 
     /**
@@ -14,7 +21,9 @@ public class TerminatorQuoter implements Quoter {
 
     @Override
     public void sayQuote() {
-        System.out.println(message);
+        for (int i = 0; i < repeat; i++) {
+            System.out.println(message);
+        }
     }
 
     public String getMessage() {

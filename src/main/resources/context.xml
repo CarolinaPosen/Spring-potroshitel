@@ -4,8 +4,14 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!--Декларация Bean-->
+<!--    Id необходим если мы хотим инжектировать bean и для этого мы вставляем id-->
     <bean class="by.itacademy.TerminatorQuoter" id="terminatorQuoter">
         <property name="message" value="I`ll be back"/>
     </bean>
+
+<!--    Инфраструктурный bean-->
+    <bean class="by.itacademy.InjectRandomIntAnnotationBeanPostProcessor"/>
+
+
 
 </beans>
