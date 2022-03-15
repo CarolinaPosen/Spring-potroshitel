@@ -11,6 +11,16 @@ public class TerminatorQuoter implements Quoter {
 
     private String message;
 
+    //(Конструктор - Phase 2)
+    public void init(){
+        System.out.println("Phase 2");
+        System.out.println(repeat);
+    }
+    //(Конструктор - Phase 1)
+    public TerminatorQuoter() {
+        System.out.println("Phase 1");
+    }
+
     /**
      Если настраиваем через xml необходим Setter
      Spring через Reflection вызывает Setter
