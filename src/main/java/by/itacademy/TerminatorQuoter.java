@@ -1,5 +1,10 @@
 package by.itacademy;
 
+import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
+
+@Profiling
 public class TerminatorQuoter implements Quoter {
 
     /**
@@ -16,6 +21,7 @@ public class TerminatorQuoter implements Quoter {
         System.out.println("Phase 2");
         System.out.println(repeat);
     }
+
     //(Конструктор - Phase 1)
     public TerminatorQuoter() {
         System.out.println("Phase 1");
